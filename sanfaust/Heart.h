@@ -1,5 +1,4 @@
-#ifndef HEART_BOOM
-#define HEART_BOOM
+#pragma once
 
 byte HEART_BOOM_1[8] = {
   0b00000,
@@ -92,4 +91,3 @@ byte HEART_BOTTOM_2[8] = {
   0b10101
 };
 
-#endif

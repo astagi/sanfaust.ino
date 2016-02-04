@@ -1,7 +1,8 @@
 #include <LiquidCrystal.h>
 #include "Heart.h"
+#include "LoopAnimation.h"
 
-LiquidCrystal lcd(13, 11, 5, 4, 3, 2);
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 
 void setup() {
 
@@ -19,9 +20,18 @@ void setup() {
 
 }
 
+int i = 0;
+
+uint8_t HEART_BOOM[] = {
+  0x20, 0x0, 0x1, 0x2, 
+  0x3, 0x2, 0x3,  0x2, 
+  0x1, 0x0, 0x20
+};
+
+LoopAnimation anim = LoopAnimation(0, 0, HEART_BOOM, sizeof(HEART_BOOM));
+
 void loop() {
-  for (uint8_t i = 0 ; i < 7 ; i++) {
-    lcd.write(i);
-  }
-  delay(1000);
+  anim.draw(lcd);
+  anim.nextFrame();
+  delay(500);
 }
