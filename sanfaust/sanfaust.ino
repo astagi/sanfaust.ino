@@ -22,7 +22,6 @@ uint8_t HEART_BOOM[] = {
 LoopAnimation anim = LoopAnimation(0, 0, HEART_BOOM, sizeof(HEART_BOOM));
 
 void loop() {
-  anim.draw(lcd);
-  anim.nextFrame();
+  anim.render(lcd);
   delay(500);
 }

@@ -26,3 +26,7 @@ void LoopAnimation::draw(LiquidCrystal &lcd) {
   lcd.write(this->_frames[this->_frame]);
 }
 
+void LoopAnimation::render(LiquidCrystal &lcd) {
+  this->draw(lcd);
+  this->nextFrame();
+}
