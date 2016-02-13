@@ -2,6 +2,7 @@
 #include "Heart.h"
 #include "LoopAnimation.h"
 #include "TextAnimation.h"
+#include "BlinkTextAnimation.h"
 #include "Counter.h"
 
 
@@ -16,8 +17,8 @@ uint8_t HEART_BOOM[] = {
 LoopAnimation heart_boom_anim_1 = LoopAnimation(0, 13, HEART_BOOM, sizeof(HEART_BOOM));
 LoopAnimation heart_boom_anim_2 = LoopAnimation(0, 2, HEART_BOOM, sizeof(HEART_BOOM));
 
-TextAnimation single_anim_1 = TextAnimation(0, 6, "I'M", true);
-TextAnimation single_anim_2 = TextAnimation(1, 4, "SINGLE!!", true);
+BlinkTextAnimation single_anim_1 = BlinkTextAnimation(0, 6, "I'M");
+BlinkTextAnimation single_anim_2 = BlinkTextAnimation(1, 4, "SINGLE!!");
 
 TextAnimation my_number_is_anim_1 = TextAnimation(0, 6, "MY");
 TextAnimation my_number_is_anim_2 = TextAnimation(1, 3, "NUMBER IS");

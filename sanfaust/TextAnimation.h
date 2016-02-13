@@ -10,13 +10,12 @@ class TextAnimation : public Animation {
   
   private:
     const char *_text;
-    bool _blink;
-    
+
+  protected:
     void draw(LiquidCrystal &lcd);
 
-    
   public:
-    TextAnimation(uint8_t x, uint8_t y, const char *_text, bool _blink=false);
+    TextAnimation(uint8_t x, uint8_t y, const char *_text);
     
 };
 
