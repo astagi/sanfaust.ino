@@ -29,17 +29,17 @@ const uint8_t Animation::getLength() {
 }
 
 void Animation::restart() {
-  this->_status = 0;
+  this->_status = AnimationStatus::start;
   this->_frame = 0;
   this->_amount_delay = this->_delay;
 }
 
 void Animation::stop() {
-  this->_status = 1;
+  this->_status = AnimationStatus::stop;
 }
 
 void Animation::pause() {
-  this->_status = 2;
+  this->_status = AnimationStatus::pause;
 }
 
 void Animation::setPosition(uint8_t x, uint8_t y) {
@@ -48,8 +48,8 @@ void Animation::setPosition(uint8_t x, uint8_t y) {
 }
 
 void Animation::render(LiquidCrystal &lcd) {
-  if (this->_status != 0) {
-    if (this->_status == 2) {
+  if (this->_status != AnimationStatus::start) {
+    if (this->_status == AnimationStatus::pause) {
       this->draw(lcd);
     }
     return;
