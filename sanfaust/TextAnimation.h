@@ -15,7 +15,7 @@ class TextAnimation : public Animation {
     void draw(LiquidCrystal &lcd);
 
   public:
-    TextAnimation(uint8_t x, uint8_t y, const char *_text);
+    TextAnimation(uint8_t x, uint8_t y, const char *_text, uint8_t len);
     
 };
 

@@ -12,6 +12,6 @@ class BlinkTextAnimation : public TextAnimation {
     void draw(LiquidCrystal &lcd);
     
   public:
-    BlinkTextAnimation(uint8_t x, uint8_t y, const char *_text);
+    BlinkTextAnimation(uint8_t x, uint8_t y, const char *_text, uint8_t len);
 };
 

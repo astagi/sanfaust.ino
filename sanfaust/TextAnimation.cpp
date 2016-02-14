@@ -1,7 +1,7 @@
 #include "TextAnimation.h"
 #include <LiquidCrystal.h>
 
-TextAnimation::TextAnimation(uint8_t x, uint8_t y, const char *_text) : Animation(x, y, 1){
+TextAnimation::TextAnimation(uint8_t x, uint8_t y, const char *_text, uint8_t len) : Animation(x, y, len){
   this->_text = _text;
 }
 

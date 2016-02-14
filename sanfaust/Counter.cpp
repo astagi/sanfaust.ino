@@ -46,3 +46,7 @@ int Counter::next() {
   return this->_current;
 }
 
+int Counter::getCurrentValue() {
+  return this->_current;
+}
+

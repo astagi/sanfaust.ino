@@ -9,3 +9,7 @@ void LoopAnimation::draw(LiquidCrystal &lcd) {
   lcd.setCursor(this->_y, this->_x);
   lcd.write(this->_frames[this->_frame]);
 }
+
+bool LoopAnimation::isEnd() {
+  return false;
+}

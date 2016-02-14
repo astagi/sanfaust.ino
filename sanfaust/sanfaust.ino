@@ -17,32 +17,36 @@ uint8_t HEART_BOOM[] = {
 LoopAnimation heart_boom_anim_1 = LoopAnimation(0, 13, HEART_BOOM, sizeof(HEART_BOOM));
 LoopAnimation heart_boom_anim_2 = LoopAnimation(0, 2, HEART_BOOM, sizeof(HEART_BOOM));
 
-BlinkTextAnimation single_anim_1 = BlinkTextAnimation(0, 6, "I'M");
-BlinkTextAnimation single_anim_2 = BlinkTextAnimation(1, 4, "SINGLE!!");
+BlinkTextAnimation single_anim_1 = BlinkTextAnimation(0, 6, "I'M", 4);
+BlinkTextAnimation single_anim_2 = BlinkTextAnimation(1, 4, "SINGLE!!", 4);
 
-TextAnimation my_number_is_anim_1 = TextAnimation(0, 6, "MY");
-TextAnimation my_number_is_anim_2 = TextAnimation(1, 3, "NUMBER IS");
+TextAnimation my_number_is_anim_1 = TextAnimation(0, 6, "MY", 4);
+TextAnimation my_number_is_anim_2 = TextAnimation(1, 3, "NUMBER IS", 4);
 
-TextAnimation my_number_anim_1 = TextAnimation(0, 6, "322");
-TextAnimation my_number_anim_2 = TextAnimation(1, 4, "2222222");
+TextAnimation my_number_anim_1 = TextAnimation(0, 6, "339", 4);
+TextAnimation my_number_anim_2 = TextAnimation(1, 4, "2625610", 4);
 
 Counter counter = Counter(20);
 
 void setup() {
   setUpHearts(lcd);
   lcd.begin(16, 2);
+  my_number_is_anim_1.setDelay(1);
+  my_number_is_anim_2.setDelay(1);
+  my_number_anim_1.setDelay(1);
+  my_number_anim_2.setDelay(1);
 }
 
 void loop() {
-  if (counter.isBelow(10)) {
-    single_anim_1.render(lcd);
-    single_anim_2.render(lcd);
-  }
-  if (counter.isBetween(10, 15, true)) {
+  
+  single_anim_1.render(lcd);
+  single_anim_2.render(lcd);
+
+  if (single_anim_1.isEnd()) {
     my_number_is_anim_1.render(lcd);
     my_number_is_anim_2.render(lcd);
   }
-  if (counter.isBetween(15, 20, true)) {
+  if (my_number_is_anim_1.isEnd()) {
     my_number_anim_1.render(lcd);
     my_number_anim_2.render(lcd);
   }

@@ -12,4 +12,5 @@ class Counter {
     bool isBelow(int n, bool equal=false);
     bool isBetween(int n1, int n2, bool equal1=false, bool equal2=false);
     int next();
+    int getCurrentValue();
 };

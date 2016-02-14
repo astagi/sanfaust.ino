@@ -11,6 +11,7 @@ class LoopAnimation : public Animation {
   private:
     const uint8_t *_frames;
     void draw(LiquidCrystal &lcd);
+    bool isEnd();
     
   public:
     LoopAnimation(uint8_t x, uint8_t y, const uint8_t *frames, uint8_t len);
