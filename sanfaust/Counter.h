@@ -1,11 +1,11 @@
 #pragma once
 
 class Counter {
-  
+
   protected: // Everything's protected for performances
     int _size;
     int _current;
-    
+
   public:
     Counter(int _size);
     bool isOver(int n, bool equal=false);

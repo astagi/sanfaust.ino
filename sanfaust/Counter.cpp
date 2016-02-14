@@ -25,7 +25,7 @@ bool Counter::isBelow(int n, bool equal) {
 bool Counter::isBetween(int n1, int n2, bool equal1, bool equal2) {
   bool first = false;
   bool second = false;
-  
+
   if (equal1) {
     first = (n1 <= this->_current);
   } else {

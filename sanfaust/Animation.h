@@ -5,7 +5,7 @@ typedef unsigned char uint8_t;
 class LiquidCrystal;
 
 class Animation {
-  
+
   protected: // Everything's protected for performances
     uint8_t _x;
     uint8_t _y;
@@ -16,7 +16,7 @@ class Animation {
     uint8_t _status = 0;
     virtual void draw(LiquidCrystal &lcd) = 0;
     const uint8_t nextFrame();
-    
+
   public:
     virtual bool isEnd();
     void restart();
