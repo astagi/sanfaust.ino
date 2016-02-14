@@ -8,7 +8,7 @@ class LiquidCrystal;
 
 class BlinkTextAnimation : public TextAnimation {
   
-  private:
+  protected:
     void draw(LiquidCrystal &lcd);
     
   public:

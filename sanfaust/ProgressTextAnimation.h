@@ -11,6 +11,7 @@ class ProgressTextAnimation : public TextAnimation {
   private:
     char *_text_aux;
     char _saved_char = '\0';
+  protected:
     void draw(LiquidCrystal &lcd);
     
   public:
