@@ -8,10 +8,8 @@ class LiquidCrystal;
 
 class TextAnimation : public Animation {
   
-  private:
-    const char *_text;
-
   protected:
+    const char *_text;
     void draw(LiquidCrystal &lcd);
 
   public:
