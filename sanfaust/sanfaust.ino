@@ -5,9 +5,10 @@
 #include "BlinkTextAnimation.h"
 #include "ProgressTextAnimation.h"
 #include "Counter.h"
+#include "cfg.h"
 
 
-LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+LiquidCrystal lcd(LCD_PINS);
 
 uint8_t HEART_BOOM[] = {
   0x20, HEART_BOOM_1_ID, HEART_BOOM_2_ID, HEART_EMPTY_ID,
