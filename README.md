@@ -11,7 +11,11 @@ Cool addon for your belt, only for love hunters!
 
 	$ ./configure.sh
 
-You can use sanfaust/cfg.h generated file to configure your project.
+You can use sanfaust/cfg.h generated file to configure your project. You have to setup your LCD pins there.
+
+    #define LCD_PINS 7, 8, 9, 10, 11, 12
+
+Enjoy!
 
 ## License
 

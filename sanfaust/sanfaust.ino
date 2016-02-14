@@ -11,19 +11,19 @@ LiquidCrystal lcd(LCD_PINS);
 
 uint8_t HEART_BOOM[] = {
   0x20, HEART_BOOM_1_ID, HEART_BOOM_2_ID, HEART_EMPTY_ID,
-  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID, 
+  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID,
   HEART_FILLED_ID,  HEART_EMPTY_ID, HEART_BOOM_2_ID, HEART_BOOM_1_ID, 0x20
 };
 
 uint8_t HEART_BOOM_FROM_BOTTOM[] = {
   0x20, HEART_BOTTOM_2_ID, HEART_BOTTOM_1_ID, HEART_EMPTY_ID,
-  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID, 
+  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID,
   HEART_FILLED_ID,  HEART_EMPTY_ID, HEART_BOTTOM_1_ID, HEART_BOTTOM_2_ID, 0x20
 };
 
 uint8_t HEART_BOOM_FROM_TOP[] = {
   0x20, HEART_TOP_1_ID, HEART_TOP_2_ID, HEART_EMPTY_ID,
-  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID, 
+  HEART_FILLED_ID, HEART_EMPTY_ID, HEART_FILLED_ID,  HEART_EMPTY_ID,
   HEART_FILLED_ID,  HEART_EMPTY_ID, HEART_TOP_2_ID, HEART_TOP_1_ID, 0x20
 };
 
@@ -38,8 +38,8 @@ Animation *animations[] = {
   new BlinkTextAnimation(1, 4, "SINGLE!!", 4),
   new TextAnimation(0, 6, "MY", 4),
   new TextAnimation(1, 3, "NUMBER IS:", 4),
-  new ProgressTextAnimation(0, 6, "339"),
-  new ProgressTextAnimation(1, 4, "2625610") 
+  new ProgressTextAnimation(0, 6, "322"),
+  new ProgressTextAnimation(1, 4, "2222222")
 };
 
 void setup() {
@@ -63,7 +63,7 @@ void end_loop() {
 }
 
 void loop() {
-  
+
   animations[6]->render(lcd);
   animations[7]->render(lcd);
 
